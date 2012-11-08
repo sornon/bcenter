@@ -1,0 +1,17 @@
+.wrap-busi{ width:990px; margin:0 auto}
+.bg-fff{ background:#fff}
+.busi-box-t-blr{width:960px;margin:0 auto 30px auto; border:1px solid #e5e5e5; border-top:2px solid #0e6b8f; background:#f6f6f6; padding:10px}
+
+.busi-box-t-blr dl dt{ float:left; width:150px; text-align:right; font:14px/34px simsun; padding-right:10px}
+.busi-box-t-blr dl dd{ float:left;}
+
+.busi-edit-box2{ width:860px; margin:0 auto}
+.busi-edit-box2 .busi-edit-box-tit{ font-size:14px;}
+.busi-edit-box-con2{margin:0px 10px; border-top:1px solid #fff; padding:10px;}
+.busi-edit-box-con2 dl{float:left; font:14px/24px simsun; margin:0 0 2px 0}
+.busi-edit-box-con2 dl dt{ float:left; width:100px; color:#333;height:30px; text-align:right; padding-right:10px}
+.busi-edit-box-con2 dl dd{ float:left; width:700px; height:30px;}
+.busi-edit-box-con2 dl dd .busi-edit-txt{ border:1px #fff solid; background:none; display:inline-block; margin:0; padding:3px; font:12px/16px simsun; margin-right:5px; width:300px;}
+.busi-edit-box-con2 dl dd.hover .busi-edit-txt,.busi-edit-box-con2 dl dd:hover .busi-edit-txt{ border:1px #ccc solid; background:#fff;}
+.busi-edit-box-con2 dl dt b{ display:inline-block; width:14px; color:#F00}
+.busi-edit-box-con2 p{ padding:0px 10px 10px 30px}

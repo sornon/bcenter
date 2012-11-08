@@ -1,0 +1,105 @@
+.bg-fff { background-color:#fff }
+.pad-20 { padding:20px }
+.yahei24 { font: 24px/32px "Microsoft YaHei"; margin-bottom: 7px; padding-bottom: 7px; }
+.w740 { width:740px; margin:10px auto }
+.tb-810 {}
+.tb-810 td { padding:6px }
+.dot-gap { height:1px; padding-top:20px; margin-bottom:20px; border-bottom:1px dotted #333 }
+.tex-260-90 { width:260px; height:90px }
+.btn-orange, .add-txt, .clos, .add-m-city-btn,.btn-s,.btn-screen,.ico-arrow-up,.ico-arrow-nomor,.ico-arrow-down{ background-image:url(../../images/bCenter/bg-job-m.png); background-repeat:no-repeat }
+.btn-orange { border:1px solid #d4811b; height:29px; background-color:#ff9819; background-repeat:repeat-x; color:#FFF; font-family:Microsoft YaHei; font-size:16px; padding:0 6px }
+.btn-orange:hover{ color:#fff; text-decoration:none}
+.btn-orange:visited { color:#FFF }
+.inp-190 { width:190px }
+label, button, .btn-orange { cursor:pointer }
+.want-you-ul li { float:left; display:inline; width:160px; margin:10px 0 }
+.add-txt { background-position:0 -65px; padding-left:14px; white-space:nowrap }
+table label{}
+.bd-r-e8e8e8 { border-right:1px solid #e8e8e8 }
+.w340 { width:340px }
+.inp330 { width:330px; height:22px; line-height:22px }
+.inp600 { width:600px; height:22px; line-height:22px }
+.inp240 { width:240px; height:22px; line-height:22px }
+.inp-410 { width:410px; height:22px; line-height:22px }
+/*
+.skill_tabs ul { overflow:hidden; zoom:1 }
+.skill_tabs li { float:left; margin-right:28px; margin-bottom:20px; height:34px; line-height:34px; background:url(../../images/bCenter/bg_star.png) no-repeat; border-right:1px solid #ccc; padding:0 20px 0 35px }
+.skill_tabs li.high { background-position:0 -53px; }
+*/
+.skill_list li{height:65px; zoom:1; clear:both}
+.skill_list span,.skill_list a{float:left}
+.skill_list .num{width:10px; height:32px;border:1px solid #ccc; border-right:none; text-align:center;  color:#009bd8; font:15px/32px Arial; font-weight:bold}
+.skill_list .border_sk{height:34px;}
+.border_sk{margin-right:4px}
+.skill_t,.year_t{border:0 none; line-height:15px; height:16px; padding:8px 5px; color:#666; vertical-align:top; *margin-top:-1px;border:1px solid #ccc}
+.inerbox{ position:relative;}
+.inerboxSel{position:absolute; right:8px; top:6px;}
+.sk_close{cursor:pointer}
+
+.tb-pad6 td { padding:10px 6px }
+.chos-3city { width:120px; height:74px; border:1px solid #7f9db9 }
+.chos-3city ul { float:left; width:96px; height:74px; }
+.add-m-city { float:right; background:#d7d7d7; width:23px; height:74px; }
+.chos-3city ul li { height:24px; line-height:24px; border-bottom:1px dashed #ccc; margin:0 4px 0 5px }
+.clos { display:inline-block; float:right; margin:6px 12px 0 0; width:9px; height:9px; background-position:-91px -72px; vertical-align:middle }
+.add-m-city-btn { width:16px; height:16px; display:block; margin:29px 0 0 5px; background-position:0 -49px }
+.job-des-wrap { width:240px; height:122px;  }
+.job-des-wrap textarea { width:239px; height:102px; border:none; }
+.gray-h19 { height:19px; background:#f3f3f3; padding:0 6px }
+.s-eara { padding:10px 0 20px 86px; border-bottom:1px dotted #efefef; font-family:Arial}
+.tab-w { background-color:#effaff; border-bottom:1px solid #dfdfdf;border-top:1px solid #dfdfdf; height:29px; position:relative; margin:10px 0 }
+.tab-ul { position: absolute }
+.tab-ul li { float:left; display: inline }
+.tab-ul li a { display:inline-block; height:29px; line-height:29px; color:#666; padding:0 10px; font-size:14px; font-weight:bold }
+.tab-ul li a:visited { color:#666; position: relative }
+.tab-ul .here a { background:#fff; height:30px; border:1px solid #dfdfdf; border-bottom:none; top:-1px; color:#333 }
+.tab-ul .here a:visited { color:#333 }
+.pagesBot{float:right; margin:6px 0}
+.pagesBot li {float:left; padding:4px 0 }
+.pagesBot li a {border:1px solid #dadada; padding:3px 5px; color:#333; background:#fff; margin-left:10px;display:block;}
+.pagesBot li a:hover, .pagesBot li a.page_active { border:1px solid #53bcd9; text-decoration:none; color:#53bcd9 }
+.screen-bar{ height:27px; padding:6px 4px 0 4px; background:#effaff;clear:right}
+.c-left{ clear:left}
+.s-search{ border:1px solid #cdcdcd; width:192px; height:22px; background-color:#fff}
+.inp-s{ border:0; width:160px; height:20px; line-height:20px; float:left}
+.btn-s{ width:22px; height:22px; float:right; background-position:-78px -49px; border:0; cursor:pointer}
+.btn-screen{ margin-right:6px; height:18px; line-height:18px; background-position:0 -30px; background-repeat:repeat-x; display:inline-block;  border:1px solid #d0d0d0; padding:0 15px}.btn-screen,.btn-screen:visited{ color:#333}.btn-screen:hover{ background:#ededed;color:#72bf44;}
+.th-gray-w{ border-bottom:1px solid #dfdfdf;border-top:1px solid #dfdfdf; background-color:#f0f0f0; padding:5px 0}
+.th-gray-w td{font-weight:bold;}
+.ico-arrow-up,.ico-arrow-nomor,.ico-arrow-down{ width:8px; height:10px; display:inline-block; margin-left:3px}
+.ico-arrow-nomor{ background-position:-24px -90px}.ico-arrow-up{ background-position:-12px -90px}.ico-arrow-down{ background-position:0 -90px}
+.fc-333,.fc-333:visited{ color:#333}
+.tb-748-w td{ border-bottom:1px solid #dfdfdf}
+.conLeft{ overflow:hidden}
+/*.tr-blue td{ background-color:#effaff}*/
+.tr-blue td{ background-color:#f1f1f1;font-weight:bold;}
+.defText{ line-height:16px; padding:4px 5px}
+
+.selDelete{ white-space:nowrap; cursor:pointer; margin-left:10px; display:none;}
+.tigongUL li{ display:inline-block}
+.file_sh{ display:block; background:url(../../images/bCenter/upphoto.png) no-repeat; width:150px; height:150px;}
+.tuijian_msg{ padding:10px;}
+.pageRight h5{ padding:5px; background:#EFFAFF}
+
+.btn_yel { height:28px; font:14px/26px "宋体";font-weight:bold; display:inline-block; padding:0 15px;text-align:center;
+border: 1px solid #EB8C16; color: #fff; text-shadow: 0 1px rgba(0,0,0,0.1); background-color: #ff9d24; background-image: -webkit-gradient(linear, left top, left bottom, from(#ffad4b), to(#ff9d24)); background-image: -webkit-linear-gradient(top, #ffad4b, #ff9d24); background-image: -moz-linear-gradient(top, #ffad4b, #ff9d24); background-image: -ms-linear-gradient(top, #ffad4b, #ff9d24); background-image: -o-linear-gradient(top, #ffad4b, #ff9d24); background-image: linear-gradient(top, #ffad4b, #ff9d24);border-radius:1px;}
+.btn_yel:hover { border: 1px solid #D4811B; color: #fff; text-shadow: 0 1px rgba(0,0,0,0.3); background-color: #FF8D00; background-image: -webkit-gradient(linear, left top, left bottom, from(#FFA63C), to(#FF8D00)); background-image: -webkit-linear-gradient(top, #FFA63C, #FF8D00); background-image: -moz-linear-gradient(top, #FFA63C, #FF8D00); background-image: -ms-linear-gradient(top, #FFA63C, #FF8D00); background-image: -o-linear-gradient(top, #FFA63C, #FF8D00); background-image: linear-gradient(top, #FFA63C, #FF8D00); }
+.btn_yel:active { -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3); -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3); box-shadow: inset 0 1px 2px rgba(0,0,0,0.3); }
+
+.btn_gray,a.btn_gray{ background:#ff9819 url(../../images/bCenter/repeatx.png) repeat-x 0 -40px ; height:28px;border: 1px solid #d4801b;  color:#fff; font:14px/26px "宋体";font-weight:bold; display:inline-block; padding:0 15px;text-align:center }
+a.btn_yel,a.btn_gray{ height:26px}
+a.btn_yel:hover,a.btn_gray:hover{ text-decoration:none}
+.btn_gray,a.btn_gray{ background-color:#b6b6b6; background-position: 0 -80px;border: 1px solid #a0a0a0}
+.seemor{ overflow:hidden;}
+.moreicon{ cursor:pointer}
+.newjob td input[type='text']{ border:1px solid #ccc; border-radius:5px; padding:3px;}
+#industryid,#pro,#addr,#xueli{ border:none; background:none; line-height:30px; height:30px; width:250px;background: url("../../images/bCenter/manImgs.png") no-repeat 0px -419px;}
+.newjob select[name='education'],.newjob select[name='work_year'],.newjob select[name='salary']{ width:250px;display: inline-block;height: 28px;padding: 5px;vertical-align: middle;}
+.seemor textarea{ height:44px; overflow:auto; border:1px #ccc solid; border-radius:5px;}
+.seemor p { padding-left:40px;}
+.type-lim { display:block; padding:10px 0 0 10px; color:#999; font:14px/24px Verdana; width:100px; text-align:left; float:left; display:none}
+.seemor .want-you-ul{ padding-left:40px;}
+.formMsg{display: inline-block; width:300px; line-height:14px; vertical-align:top;}
+.addbus #industryid,.addbus #addr{ border:none; background:none; line-height:30px; height:30px; width:212px;background: url("../../images/bCenter/manImgs.png") no-repeat 0px -449px;}
+.w121-max,.w228-max{ overflow:hidden; line-height:46px; height:46px; word-break:break-all;word-wrap:break-word}
+.w121-max{ width:121px}.w228-max{ width:228px}

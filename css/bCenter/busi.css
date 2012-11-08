@@ -1,0 +1,112 @@
+.busi-h2{ display:block; width:626px; margin:10px auto}
+.busi-h2 b{ font:bold 14px/28px simsun; color:#333}
+.busi-h2 span{ font:normal 12px/28px simsun; color:#666; padding-left:20px;}
+.busi-h2 span a,.busi-edit-box a{ vertical-align:0}
+.busi-edit-box,.com-box{width:626px;margin:0 auto 30px auto; border:1px solid #e5e5e5; border-top:1px solid #0e6b8f; background:#f6f6f6; padding:10px 10px 30px 10px}
+.busi-edit-box-tit{ margin:0px 10px; border-bottom:1px solid #e5e5e5; font:bold 12px/32px simsun}
+.busi-edit-box-con{margin:0px 10px; border-top:1px solid #fff; padding:10px;}
+.busi-edit-box-con dl{float:left; font:12px/24px simsun; margin:0 0 2px 0; width:100%}
+.busi-edit-box-con dl dt{ float:left; width:90px; color:#666;height:30px;}
+.busi-edit-box-con dl dd{ float:left; width:470px; height:30px;}
+.busi-edit-box-con dl dd .busi-edit-txt{ border:1px #f6f6f6 solid; background:none; display:inline-block; margin:0; padding:3px; font:12px/16px simsun; margin-right:5px; width:300px;}
+.busi-edit-box-con dl dd.hover .busi-edit-txt,.busi-edit-box-con dl dd:hover .busi-edit-txt{ border:1px #ccc solid; background:#fff;}
+.busi-edit-box-con dl dt b{ display:inline-block; width:14px; color:#F00}
+.busi-edit-ops{width:626px; margin:0 0 0 66px;}
+.busi-edit-area{ padding:0px 14px; width:556px; float:left}
+
+/* post jobs */
+.wrap-busi{ width:990px; margin:0 auto}
+.bg-fff{ background:#fff}
+.busi-box-t-blr{width:960px;margin:0 auto 10px auto; border:1px solid #e5e5e5; border-top:2px solid #0e6b8f; background:#f6f6f6; padding:10px}
+
+.busi-box-t-blr dl dt{ float:left; width:170px; text-align:right; font:14px/34px simsun; padding-right:10px}
+.busi-box-t-blr dl dd{ float:left;}
+
+.busi-edit-box2{ width:860px; margin:0 auto}
+.busi-edit-box2 .busi-edit-box-tit{ font-size:14px;}
+.busi-edit-box-con2{margin:0px 10px; border-top:1px solid #fff; padding:10px;}
+.busi-edit-box-con2 dl{float:left; font:14px/24px simsun; margin:0 0 2px 0}
+.busi-edit-box-con2 dl dt{ float:left; width:100px; color:#333;height:30px; text-align:right; padding-right:10px}
+.busi-edit-box-con2 dl dd{ float:left; width:700px; font-size:12px; color:#666}
+.busi-edit-box-con2 dl dd .busi-edit-txt{ border:1px #fff solid; background:none; display:inline-block; margin:0; padding:3px; font:12px/16px simsun; margin-right:5px; width:300px;}
+.busi-edit-box-con2 dl dd.hover .busi-edit-txt,.busi-edit-box-con2 dl dd:hover .busi-edit-txt{ border:1px #ccc solid; background:#fff;}
+.busi-edit-box-con2 dl dt b{ display:inline-block; width:14px; color:#F00; padding:0 5px 0 0;}
+.busi-edit-box-con2 p{ padding:0px 10px 10px 44px}
+.input-and{ float:left; padding:0 10px 0px 23px}
+.input-and2{ float:left; padding:0 10px 0px 10px}
+
+
+/* comIfor */
+
+.icoAdd,.tagFirst,.tagFirst-hover,.com-addTags,.icoSubt,.btnAddPt,.imgAddPt,.icoEdit,.icoDel,.closeTag{ background:url(../../images/bCenter/comifor.png) no-repeat}
+.icoAdd,.icoSubt{ display:inline-block; width:14px; height:14px; background-position:0 -113px; margin-right:5px}
+.tagFirst,.tagFirst-hover{ background-position:-121px 0; width:112px; height:60px; text-align:center; font-size:14px; font-family:microsoft yahei; line-height:25px; padding-top:10px}
+.tagFirst-hover{ background-position: 0 0;}
+.tagFirst-hover span{ color:#fff}
+.com-tag{ position:relative; width:112px; height:60px; float:left; margin-right:12px}
+.tagSec{ position:absolute; top:35px; text-align:center; width:112px; display:none; left:0}
+.tagThird{ position:absolute; top:2px; left:2px;}
+.tagFourth{ position:absolute; top:2px; right:4px;}
+.tagFifth{position:absolute; top:53px; left:0; width:224px; border:1px solid #eee; background:#ffffec; padding:5px; display:none; z-index:10000}
+.mr0{ margin-right:0}
+.com-addTags{ display:inline-block; width:59px; height:26px; background-position:0 -80px}
+.com-box{width:626px;margin:0 auto 30px auto; border:1px solid #e5e5e5; border-top:1px solid #0e6b8f; background:#f6f6f6; padding:10px 0 0 15px}
+.bordb1{ border-bottom:1px solid #e5e5e5;}
+.bordr1{ border-right:1px solid #fefefe;}
+.bordl1{ border-left:1px solid #e5e5e5;}
+.bordt1{ border-top:1px solid #fefefe;}
+.btnDiv{ padding:10px 0; text-align:center}
+.comLeft{ width:300px; float:left}
+.comRight{ width:314px; float:left}
+.lineGray{ height:14px; width:2px; overflow:hidden; margin-right:5px; display:inline-block; background:#777; vertical-align:middle; margin-top:-2px}
+.pl-60{ padding-left:64px}
+.bordlr0{ border-right:0;border-left:0; padding-top:5px; margin-bottom:0; border-bottom:0;}
+.navCom li{float:left;}
+.navCom li a{float:left; width:85px; height:36px; text-align:center; color:#666; text-decoration:none;line-height:36px;}
+.navCom li.hover a,.navCom li a:hover{ float:left; width:83px; height:35px; border:1px solid #e5e5e5; text-align:center; line-height:36px; color:#000; border-bottom:none; background:#fff}
+.navCom{ margin-bottom:-1px}
+.comEditDiv{ width:620px; margin:0 auto; border-top:1px solid #e5e5e5; margin-top:-1px; padding:20px 10px; display:none}
+.icoSubt{ background-position:-45px -113px;}
+.titEditDiv{ height:30px; background:#f6f6f6; border:1px solid #d9d9d9; line-height:30px; padding:4px 15px}
+.conUpLoad{ border:1px solid #d9d9d9; padding:15px; border-top:none}
+.logoShow{ width:118px; height:118px; border:1px solid #d9d9d9; background:#f6f6f6; overflow:hidden; position:relative}
+.logoShow table,.logoShow td{width:118px; height:118px; text-align:center}
+.listUpload li{ overflow:hidden; zoom:1;border-bottom:1px solid #d9d9d9; margin-bottom:15px}
+.texta-tip{ padding-left:30px; width:420px;} textarea{color:#ADADAD}
+.texta-tip textarea{ width:300px; height:110px; resize:none; border:none; margin-right:5px; border:1px solid #c0c0c0; padding:4px;}
+.btnAddPt{ display:inline-block; width:83px; height:26px; border:0 none; background-position:-121px -80px; cursor:pointer; margin-right:10px; vertical-align:middle; }
+.imgAddPt{ display:inline-block; width:120px; height:120px; border:0 none; background-position:0 -137px; cursor:pointer}
+.icoEdit,.icoDel{ display:inline-block; width:24px; height:24px; cursor:pointer; background-position:-63px -80px}
+.icoDel{ background-position:-92px -80px; margin-left:5px; float:right}
+.tr-up{ width:580px; padding:5px 0 2px 0; clear:left}
+.tr-up .hover{ color:#72bf44}
+.closeTag{ display:inline-block; width:13px; height:13px; background-position:-74px -113px;}
+.text-tips{ padding:2px 3px; margin-right:5px}
+.height60{ height:70px!important}
+.txt_300{font:12px/16px Arial,"宋体"; padding:5px 25px 5px 5px; cursor:text; width:278px; white-space:nowrap; height:16px;}
+.txt_200{font:12px/16px Arial,"宋体"; padding:5px 25px 5px 5px; cursor:text; width:178px; white-space:nowrap; height:16px;}
+.pop-tip textarea{width:310px; height:110px; resize:none; border:none; margin-right:5px; border:1px solid #c0c0c0; padding:4px;}
+.pop-tip{ padding-left:30px;}
+
+/* sort nav */
+.search-sortnav{ background:#F1F1F1 url(../../images/bCenter/repeatx.png) repeat-x 0 -361px; border-top:2px solid #0e6b8f; height:54px;}
+.search-sortnav-ul{ margin-left:10px;}
+.search-sortnav-ul li{ float:left; width:160px; text-align:center; border:1px solid #f1f1f1; border-bottom:0; height:48px; background:#f1f1f1; font:bold 14px/40px simsun; margin-top:5px; cursor:pointer; color:#666}
+.search-sortnav-ul .hover{ float:left; width:160px; text-align:center; border:1px solid #e5e5e5; border-bottom:0; height:48px; background:#fff; font:bold 14px/40px simsun; margin-top:5px; cursor:pointer; color:#333}
+.search-sortnav .btn_yel{ margin:12px 12px 0 0; box-shadow:0px 1px 0px #fff}
+
+
+/* correct */
+.wrapNew{ width:988px; margin:0 auto; margin-bottom:10px}
+.corrTips{ padding:60px 50px 50px 407px; background:url(../../images/bCenter/greenCorr.png) no-repeat 332px 50px; height:40px; font:22px/1.5 'microsoft yahei'; color:#369b0f; }
+.listTj{ border:1px solid #e5e5e5; border-top:2px solid #0d6b8f; padding:20px 50px 10px 60px; overflow:hidden;zoom:1}
+.listTj ul{float:left; overflow:hidden; zoom:1; height:64px; width:265px; padding:7px; border:1px solid #e2e1e2; background:#f8f7f7; margin-right:10px; margin-bottom:10px}
+.listTj li{float:left}
+.TjCon{ padding-left:10px; width:180px}
+.titTj{ width:180px; height:22px; line-height:22px; font-size:14px}
+.txTJ{ width:64px; height:64px}
+.w360{ width:360px;}
+.lightGreen{color:#72bf44}
+.editDescr{ margin-left:10px}
+.comRight ul{ margin-right:10px;_margin-right:7px;}
+

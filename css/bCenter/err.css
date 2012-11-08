@@ -1,0 +1,5 @@
+@charset "utf-8";
+.err_bg{height:512px;background:url(../../images/zui/bg/err_bg.jpg) no-repeat center center;position:relative;overflow:hidden;}
+.error_txt{ position:absolute;left:360px;top:200px;}
+.error_txt dl dt{font-size:14px;color:red;}
+.error_txt dl dd{line-height:30px;padding-top: 10px;}

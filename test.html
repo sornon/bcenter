@@ -1,0 +1,844 @@
+﻿<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>百伯B端</title>
+<link rel="stylesheet" type="text/css" href="css/bCenter/reset.css">
+<link rel="stylesheet" type="text/css" href="css/bCenter/common.css">
+<link rel="stylesheet" type="text/css" href="css/bCenter/job-manage.css">
+<link rel="stylesheet" type="text/css" href="css/bCenter/manage_hale.css">
+<link rel="stylesheet" type="text/css" href="css/bCenter/bcenter.css">
+<link rel="stylesheet" type="text/css" href="css/bCenter/records.css">
+<link rel="stylesheet" type="text/css" href="css/bCenter/top_nav.css">
+</head>
+
+<body>
+
+<!-- common top start -->
+<div class="topnav">
+	<div class="navbar">
+    	<div class="logo_b"><a href="/site"><img src="images/bCenter/top_nav/logo.png"></a></div>
+    	<div class="nav">
+        	<div class="userinfo clearfix">
+    			<span>欢迎您！&nbsp;zftest</span>&nbsp;&nbsp;<em>|</em>&nbsp;&nbsp;<a href="/corp/out">退出</a>
+    		</div>
+    		        	<ul class="nav_list">
+                <li class="divide_line ml_13"></li>
+                <li><a id="p_site_index" href="/site" class="font_style16">首页</a></li>
+                                <li class="divide_line"></li>
+                <li><a id="p_jobmanage_index" href="/jobmanage" class="font_style16">职位发布</a></li>
+								                <li class="divide_line bg_none"></li>
+                <li><a id="p_inbox_index" href="/inbox" class="font_style16 current_item">应聘管理</a></li>
+				                <li class="divide_line bg_none"></li>
+                <li><a id="p_talentsfind_index" href="/talentsfind" class="font_style16">找人才</a></li>
+                <li class="divide_line"></li>
+                                <li><a id="p_usermanage_index" href="/usermanage" class="font_style16">管理中心</a></li>
+                                                <li class="divide_line"></li>
+                <li><a id="p_statis_result" href="/statis/result" class="font_style16">统计报表</a></li>
+								<li class="divide_line"></li>
+                <li><a id="p_app_company" href="/app/company" class="font_style16">企业应用</a></li>
+				                <li class="divide_line"></li>
+                <li><a id="p_jobport_petition" href="/jobport/petition" class="font_style16">职位接入</a></li>
+				        	</ul>
+        	        </div>
+    </div> 
+	<div class="subnav">
+    	<div id="l_jobmanage_index" class="subnav_item" style="display:none;padding-left: 257px;">
+        	<a id="s_jobmanage_index" href="/jobmanage">新增职位</a>
+        	<span>|</span>
+            <a id="s_jobrecord_index" href="/jobrecord">职位列表</a>
+            <span>|</span>
+            <a id="s_jobtpl_index" href="/jobtpl">职位模板</a>
+        </div>
+    	<div id="l_inbox_index" class="subnav_item" style="padding-left: 207px; ">
+        	<a id="s_jobresumes_index" href="/jobresumes">按职位查看简历</a>
+        	<span>|</span>
+            <a id="s_inbox_index" href="/inbox" class="subnav_item_first">应聘简历</a>
+            <span>|</span>
+            <a id="s_inbox_purchased" href="/inbox/purchased">搜索购买简历</a>
+            <span>|</span>
+            <a id="s_candidatesmanage_filtersearch" href="/candidatesmanage/filtersearch">已过滤的简历</a>
+            <span>|</span>
+            <a id="s_candidatesmanage_deletesearch" href="/candidatesmanage/deletesearch">简历回收站</a>
+        </div>
+    	<div id="l_talentsfind_index" class="subnav_item" style="display:none; padding-left:492px">
+        	<a id="s_talentsfind_index" href="/talentsfind">人才搜索</a>
+        	<span>|</span>
+            <a id="s_talentscollect_index" href="/talentscollect">人才收藏夹</a>
+        </div>
+    	<div id="l_usermanage_index" class="subnav_item" style="display:none; padding-left:588px">
+        	<a id="s_usermanage_editself" href="/usermanage/editself">帐号管理</a>
+			            <span>|</span>
+            <a id="s_usermanage_index" href="/usermanage">用户管理</a>
+			    	</div>
+    	<div id="l_statis_result" class="subnav_item" style="display:none; padding-left:703px">
+        	<a id="s_statis_result" href="/statis/result">职位发布效果统计</a>
+        </div>
+    	<div id="l_jobport_petition" class="subnav_item" style="display:none; padding-left:669px">
+        	<a id="s_jobport_petition" href="/jobport/petition">职位接入申请</a>
+        	<span>|</span>
+        	<a id="s_jobport_urllist" href="/jobport/urllist">数据上传地址</a>
+        	<span>|</span>
+        	<a id="s_jobport_interface" href="/jobport/interface">接口文档</a>
+        </div>
+    </div>
+</div>
+<!-- common top end -->
+
+<form id="frm" method="get" action="" onsubmit="searchCheck();">
+<div class="b-wrap clearfix bgWhite">
+	<div class="b-wrap-tit">
+    	<h1>应聘简历</h1>
+    </div>
+    <div class="search-tale">
+    	<div class="search-tale-main clearfix">
+        	<div class="search-tale-box">
+				<div class="search-tale-searbox select">
+	            	<input class="search-tale-keyword t-text2" type="text" autocomplete="off" placeholder="请输入搜索关键字" name="kw" value="" maxlength="50">
+					<input type="hidden" name="ks" act="frm" value="">
+                    <ul class="sel-ops">
+                        <li val="1"><b></b> - 搜职位名称</li>
+                        <li val="2"><b></b> - 搜公司名称</li>
+                        <li val="3"><b></b> - 搜学校名称</li>
+                                                <li val="2"><b></b> - 搜工作经历</li>
+                        <li val="5"><b></b> - 搜简历编号</li>
+                        <li val="6"><b></b> - 搜应聘职位</li>
+                        <li val="7"><b></b> - 搜应聘部门</li>
+                        <li class="sel-ops-last" val="0"><b></b> - 搜全文</li>
+                    </ul>
+                </div>
+                <input class="search-tale-btn btn100_32" type="submit" value="搜索">
+                <span class="search-tale-t">- <b>或</b> -</span>
+            </div>
+        	<div class="search-tale-plug">
+            	<div class="search-plug-box t-text2 len select">
+            		<i>使用快速搜索</i>
+            		<input type="hidden" name="">
+					<ul id="searcherList" class="sel-ops">
+                    </ul>
+                </div>
+                <div class="hide"><input type="hidden"></div>
+            </div>
+        </div>
+    	<div class="search-tale-more clearfix hide">
+        	<table class="search-tab" border="0" cellspacing="0" cellpadding="0" align="left">
+              <tr>
+                <td class="search-tab-lab" align="right">职业类别：</td>
+                <td class="search-tab-val"><div class="sel_150 t-text2 len" id="profession"><i tit="">不限</i><input type="hidden" name="p1" value=""><input type="hidden" name="p2" value=""></div></td>
+                <td class="search-tab-lab" align="right">行业：</td>
+                <td class="search-tab-val"><div class="sel_150 t-text2 len" id="industry"><i tit="">不限</i><input type="hidden" name="i1" value=""><input type="hidden" name="i2" value=""></div></td>
+                <td class="search-tab-lab" align="right">现居地：</td>
+                <td class="search-tab-val"><div class="sel_150 t-text2 len" id="address"><i tit="">不限</i><input type="hidden" name="c1" value=""><input type="hidden" name="c2" value=""></div></td>
+                <td class="search-tab-lab" align="right">性别：</td>
+                <td class="search-tab-val">
+                	<div class="sel_150 t-text2 len select">
+                    	<i id="g">不限</i>
+                        <input type="hidden" name="g" value="">
+                        <ul class="sel-ops">
+                        	<li val="0">不限</li>
+                        	<li val="2">男性</li>
+                        	<li val="1">女性</li>
+                        </ul>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="search-tab-lab" align="right">投递时间：</td>
+                <td class="search-tab-val">
+                	<div class="sel_150 t-text2 len select">
+                        <i id="t">不限</i>
+                        <input type="hidden" name="t" value="">
+                        <ul class="sel-ops">
+                        	<li val="-1">不限</li>
+                        	<li val="0">今天</li>
+                        	<li val="3">3天内</li>
+                        	<li val="7">7天内</li>
+                        	<li val="15">15天内</li>
+                        	<li val="30">1个月内</li>
+                        </ul>
+                    </div>
+                </td>
+                <td class="search-tab-lab" align="right">学历：</td>
+                <td class="search-tab-val">
+                	<div class="sel_70 t-text2 len select">
+                    	<i id="h1">不限</i>
+                        <input type="hidden" name="h1" lte="h2" val="-1" value="">
+                        <ul class="sel-ops">
+                        	<li val="-1">不限</li>
+							<li val="0">小学</li>
+							<li val="1">初中</li>
+                        	<li val="2">高中</li>
+                        	<li val="3">中专</li>
+                        	<li val="4">大专</li>
+                        	<li val="5">本科</li>
+                        	<li val="6">硕士</li>
+                        	<li val="7">博士</li>
+                        	<li val="8">其他</li>
+                        </ul>
+                    </div>
+                    <em>至</em>
+                	<div class="sel_70 t-text2 len select">
+                    	<i id="h2">不限</i>
+                        <input type="hidden" name="h2" gte="h1" val="-1" value="">
+                        <ul class="sel-ops">
+                        	<li val="-1">不限</li>
+                        	<li val="0">小学</li>
+                        	<li val="1">初中</li>
+                        	<li val="2">高中</li>
+                        	<li val="3">中专</li>
+                        	<li val="4">大专</li>
+                        	<li val="5">本科</li>
+                        	<li val="6">硕士</li>
+                        	<li val="7">博士</li>
+                        	<li val="8">其他</li>
+                        </ul>
+                    </div>
+                </td>
+                <td class="search-tab-lab" align="right">工作经验：</td>
+                <td class="search-tab-val">
+                	<div class="sel_70 t-text2 len select">
+                    	<i id="w1">不限</i>
+                        <input type="hidden" name="w1" lte="w2" val="-3" value="">
+                        <ul class="sel-ops">
+                        	<li val="-3">不限</li>
+                        	<li val="-2">在读</li>
+                        	<li val="-1">应届</li>
+                        	<li val="1">一年</li>
+                        	<li val="2">二年</li>
+                        	<li val="3">三年</li>
+                        	<li val="5">五年</li>
+                        	<li val="8">八年</li>
+                        </ul>
+                    </div>
+                    <em>至</em>
+                	<div class="sel_70 t-text2 len select">
+                    	<i id="w2">不限</i>
+                        <input type="hidden" name="w2" gte="w1" val="-3" value="">
+                        <ul class="sel-ops">
+                        	<li val="-3">不限</li>
+                        	<li val="-2">在读</li>
+                        	<li val="-1">应届</li>
+                        	<li val="1">一年</li>
+                        	<li val="2">二年</li>
+                        	<li val="3">三年</li>
+                        	<li val="5">五年</li>
+                        	<li val="8">八年</li>
+                        	<li val="*">八年以上</li>
+                        </ul>
+                    </div>                
+                </td>
+                <td class="search-tab-lab" align="right">年龄：</td>
+                <td class="search-tab-val">
+                	<div class="sel_70 t-text2 len select">
+                    	<i id="a1">不限</i>
+                        <input type="hidden" name="a1" lte="a2" val="0" value="">
+                        <ul class="sel-ops">
+                        	<li val="0">不限</li>
+                            <li val="16">16岁</li>
+                            <li val="18">18岁</li>
+                            <li val="20">20岁</li>
+                            <li val="21">21岁</li>
+                            <li val="22">22岁</li>
+                            <li val="23">23岁</li>
+                            <li val="24">24岁</li>
+                            <li val="25">25岁</li>
+                            <li val="26">26岁</li>
+                            <li val="27">27岁</li>
+                            <li val="28">28岁</li>
+                            <li val="29">29岁</li>
+                            <li val="30">30岁</li>
+                            <li val="31">31岁</li>
+                            <li val="32">32岁</li>
+                            <li val="33">33岁</li>
+                            <li val="34">34岁</li>
+                            <li val="35">35岁</li>
+                            <li val="40">40岁</li>
+                            <li val="45">45岁</li>
+                            <li val="50">50岁</li>
+                        </ul>
+                    </div>
+                    <em>至</em>
+                	<div class="sel_70 t-text2 len select">
+                    	<i id="a2">不限</i>
+                        <input type="hidden" name="a2" gte="a1" val="0" value="">
+                        <ul class="sel-ops">
+                        	<li val="0">不限</li>
+                            <li val="16">16岁</li>
+                            <li val="18">18岁</li>
+                            <li val="20">20岁</li>
+                            <li val="21">21岁</li>
+                            <li val="22">22岁</li>
+                            <li val="23">23岁</li>
+                            <li val="24">24岁</li>
+                            <li val="25">25岁</li>
+                            <li val="26">26岁</li>
+                            <li val="27">27岁</li>
+                            <li val="28">28岁</li>
+                            <li val="29">29岁</li>
+                            <li val="30">30岁</li>
+                            <li val="31">31岁</li>
+                            <li val="32">32岁</li>
+                            <li val="33">33岁</li>
+                            <li val="34">34岁</li>
+                            <li val="35">35岁</li>
+                            <li val="40">40岁</li>
+                            <li val="45">45岁</li>
+                            <li val="50">50岁</li>
+                        </ul>
+                    </div>
+                </td>
+              </tr>
+            </table>
+
+			<div class="search-tale-etc">
+            	<span class="btn-com-gray" onclick="searcherAdd(1);">根据此搜索条件创建快速搜索</span>
+            	<span id="searchReset" class="btn-com-gray">清空搜索条件</span>
+                            </div>
+        </div>
+        <div class="search-togg"><div class="search-togg-down"></div></div>
+        <input type="hidden" id="SlideStat" name="d" value="">
+    </div>
+	
+    <div class="search-result">
+    	<div class="search-bar clearfix">
+        	<div class="search-bar-left">
+            	<span class="btn-com-gray" id="buyId">购买</span>
+            	<span class="btn-com-gray trigger-export">导出</span>
+                  <div class="float-pop-list">
+                  	<ul>
+                      <li id="export1">Html</li>
+                                        	</ul>
+                  </div>
+                <span class="btn-com-gray" id="zhuanfa-btn">转发</span>
+                <span class="btn-com-gray trigger-marks">添加备注</span>
+                    <div class="float-pop-list width170 pop-checkbox">
+                      <p class="mt-10">将简历备注为：</p>
+                      <ul>
+                        <li val="-1"><a>初选合格</a></li>
+                        <li val="-2"><a>初选不合格</a></li>
+                        <li val="-3"><a>初选结果待定</a></li>
+                        <li val="-4"><a>已转发用人方</a></li>
+                        <li val="-5"><a>已安排面试</a></li>
+                        <li val="-6"><a>面试合格</a></li>
+                        <li val="-7"><a>面试不合格</a></li>
+                        <li val="-8"><a>面试结果待定</a></li>
+                        <li val="-9"><a>面试缺席</a></li>
+                        <li val="-10"><a>已发Offer</a></li>
+                        <li val="-11"><a>已录用</a></li>
+                        <li val="-12"><a>录用终止</a></li>
+                        <li val="582"><a>* 按时来上班</a><i class="box-del"></i></li>
+                        <li val="907"><a>* 红领巾</a><i class="box-del"></i></li>
+                        <li val="1038"><a>* 中国人,都是好养的</a><i class="box-del"></i></li>
+                        <li val="1347"><a>* 备注测试</a><i class="box-del"></i></li>
+                        <li val="1348"><a>* 备注测试2</a><i class="box-del"></i></li>
+                        <li val="1357"><a>* 测试删除</a><i class="box-del"></i></li>
+                        <li val="1363"><a>* 工作年限</a><i class="box-del"></i></li>
+                        <li val="1375"><a>* html</a><i class="box-del"></i></li>
+                        <li val="1376"><a>* txt</a><i class="box-del"></i></li>
+                        <li val="1377"><a>* word</a><i class="box-del"></i></li>
+                        <li val="1378"><a>* pdf</a><i class="box-del"></i></li>
+                        <li val="1379"><a>* mht</a><i class="box-del"></i></li>
+                        <li val="1380"><a>* testui</a><i class="box-del"></i></li>
+                        <li val="1381"><a>* testui7</a><i class="box-del"></i></li>
+                        <li val="1383"><a>* 年龄有问题</a><i class="box-del"></i></li>
+                      </ul>
+                      <div class="pop-form clearfix">
+                          <p class="clearfix"><input type="text" autocomplete="off" placeholder="新建备注" class="t-text2 txt_100" maxlength="8" style="color: rgb(173, 173, 173); "></p>
+                          <p class="clearfix"><input type="button" class="btn-com-gray btn-add" value="添加"> <input type="button" flag="1" class="btn-com-gray btn-set" value="应用"></p>
+                      </div>
+                    </div>
+                <span class="btn-com-gray" id="btn-del">删除</span>
+            </div>
+            <div class="search-bar-right">
+            </div>
+            <div class="pageNum">
+              <ul class="pagesNew clearfix"><li class="page_count"><em>共搜索到427条记录</em></li><li class="first "><a href="javascript:void(0);">首页</a></li><li class="previous "><a href="javascript:void(0);">上一页</a></li><li class="page selected">1</li><li class="page"><a href="?pn=2">2</a></li><li class="page"><a href="?pn=3">3</a></li><li class="page"><a href="?pn=4">4</a></li><li class="page"><a href="?pn=5">5</a></li><li class="page"><a href="?pn=6">6</a></li><li class="page"><a href="?pn=7">7</a></li><li class="page"><a href="?pn=8">8</a></li><li class="page"><a href="?pn=9">9</a></li><li class="page"><a href="?pn=10">10</a></li><li class="next"><a href="?pn=2">下一页</a></li> <li class="last"><a href="?pn=29">尾页</a></li> </ul>            </ul></ul></div>
+        </div>
+        <div class="search-list-ops clearfix">
+        	<i class="inline-fl"><input class="t-cb allCheck" type="checkbox"></i>
+            <i class="inline-fl mr-20">全选</i>
+            <i class="inline-fl">筛选：</i>
+            <div class="btn-com-gray mini select">
+                <ul class="sel-ops">
+                    <li val="0">全部</li>
+                    <li val="-1">初选合格</li>
+                    <li val="-2">初选不合格</li>
+                    <li val="-3">初选结果待定</li>
+                    <li val="-4">已转发用人方</li>
+                    <li val="-5">已安排面试</li>
+                    <li val="-6">面试合格</li>
+                    <li val="-7">面试不合格</li>
+                    <li val="-8">面试结果待定</li>
+                    <li val="-9">面试缺席</li>
+                    <li val="-10">已发Offer</li>
+                    <li val="-11">已录用</li>
+                    <li val="-12">录用终止</li>
+                    <li val="582">* 按时来上班</li>
+                    <li val="907">* 红领巾</li>
+                    <li val="1038">* 中国人,都是好养的</li>
+                    <li val="1347">* 备注测试</li>
+                    <li val="1348">* 备注测试2</li>
+                    <li val="1357">* 测试删除</li>
+                    <li val="1363">* 工作年限</li>
+                    <li val="1375">* html</li>
+                    <li val="1376">* txt</li>
+                    <li val="1377">* word</li>
+                    <li val="1378">* pdf</li>
+                    <li val="1379">* mht</li>
+                    <li val="1380">* testui</li>
+                    <li val="1381">* testui7</li>
+                    <li val="1383">* 年龄有问题</li>
+                </ul>
+            	<em class="sel-icon"></em>
+            	<i>按备注</i>
+                <input type="hidden" act="frm" name="m" value="">
+            </div>
+            
+            <div class="btn-com-gray mini select">
+                <ul class="sel-ops">
+                    <li val="0">全部</li>
+                    <li val="1">已购买</li>
+                    <li val="2">未购买</li>
+                </ul>
+            	<em class="sel-icon"></em>
+            	<i>按状态</i>
+                <input type="hidden" act="frm" name="s" value="">
+            </div>
+        </div>
+        <input type="hidden" name="o" value="">
+        <table border="0" cellspacing="0" cellpadding="0" class="search-list" width="100%">
+          <tbody><tr style="background-color: rgb(245, 245, 245); background-position: initial initial; background-repeat: initial initial; ">
+            <th>&nbsp;</th>
+                        <th>备注</th>
+            <th>姓名/编号</th>
+            <th>应聘职位</th>
+            <th>应聘部门</th>
+            <th>职位工作地点</th>
+            <th>性别</th>
+            <th><a class="orderby" val="2" set="o" act="frm"><b>经验</b><em class="nothing"></em></a></th>
+            <th>学历</th>
+            <th><a class="orderby" val="3" set="o" act="frm"><b>年龄</b><em class="nothing"></em></a></th>
+                        <th><a class="orderby" val="5" set="o" act="frm"><b>投递时间</b><em class="nothing"></em></a></th>
+          </tr>
+          <tr>
+            <td><input class="t-cb tdCheck" type="checkbox" value="1142198" tabid="-1" name="resumeId"><span class="icon-buy buyNeed" title="购买" key="1142198"></span></td>
+                        <td title="初选合格">初选合格&nbsp;</td>
+            <td><span title="未查看" class="user-stat1">
+				<a href="/resumeinfo/candidates?objId=1142198&amp;sourceId=1" target="_blank">ID:5760566</a>
+			</span>            </td>
+            <td title="计算机硬件">计算机硬件&nbsp;</td>
+            <td>11aaaaaa&nbsp;</td>
+            <td title=" 天津市"> 天津市&nbsp;</td>
+            <td>保密</td>
+            <td>〇年&nbsp;</td>
+            <td>暂无&nbsp;</td>
+            <td>16岁</td>
+                        <td>2012/10/08</td>
+          </tr>
+          <tr style="background-color: rgb(245, 245, 245); background-position: initial initial; background-repeat: initial initial; ">
+            <td><input class="t-cb tdCheck" type="checkbox" value="1142196" tabid="-1" name="resumeId"><span class="icon-buyed" title="已购买"></span></td>
+                        <td title="初选合格">初选合格&nbsp;</td>
+            <td><span title="已查看" class="user-stat2">
+				<a href="/resumeinfo/candidates?objId=1142196&amp;sourceId=1" target="_blank">ID:5759693</a>
+			</span>            </td>
+            <td title="计算机硬件">计算机硬件&nbsp;</td>
+            <td>11aaaaaa&nbsp;</td>
+            <td title=" 天津市"> 天津市&nbsp;</td>
+            <td>保密</td>
+            <td>〇年&nbsp;</td>
+            <td>暂无&nbsp;</td>
+            <td>16岁</td>
+                        <td>2012/10/08</td>
+          </tr>
+          <tr>
+            <td><input class="t-cb tdCheck" type="checkbox" value="1142194" tabid="-10" name="resumeId"><span class="icon-buy buyNeed" title="购买" key="1142194"></span></td>
+                        <td title="已发Offer">已发Offer&nbsp;</td>
+            <td><span title="已查看" class="user-stat2">
+				<a href="/resumeinfo/candidates?objId=1142194&amp;sourceId=1" target="_blank">ID:5760070</a>
+			</span><a href="/swfview?id=508" target="_blank" title="查看附件简历"><i class="atta"></i></a>            </td>
+            <td title="PHP">PHP&nbsp;</td>
+            <td>研发部&nbsp;</td>
+            <td title=" 北京市"> 北京市&nbsp;</td>
+            <td>男</td>
+            <td>三年&nbsp;</td>
+            <td>本科&nbsp;</td>
+            <td>23岁</td>
+                        <td>2012/09/28</td>
+          </tr>
+          <tr style="background-color: rgb(245, 245, 245); background-position: initial initial; background-repeat: initial initial; ">
+            <td><input class="t-cb tdCheck" type="checkbox" value="1142193" tabid="" name="resumeId"><span class="icon-buy buyNeed" title="购买" key="1142193"></span></td>
+                        <td title="">&nbsp;</td>
+            <td><span title="未查看" class="user-stat1">
+				<a href="/resumeinfo/candidates?objId=1142193&amp;sourceId=1" target="_blank">ID:5760070</a>
+			</span><a href="/swfview?id=508" target="_blank" title="查看附件简历"><i class="atta"></i></a>            </td>
+            <td title="电子/电器/半导体/仪器仪表">电子/电器/半导&nbsp;</td>
+            <td>dsad&nbsp;</td>
+            <td title=" 北京市"> 北京市&nbsp;</td>
+            <td>男</td>
+            <td>三年&nbsp;</td>
+            <td>本科&nbsp;</td>
+            <td>23岁</td>
+                        <td>2012/09/28</td>
+          </tr>
+          <tr>
+            <td><input class="t-cb tdCheck" type="checkbox" value="1142192" tabid="" name="resumeId"><span class="icon-buy buyNeed" title="购买" key="1142192"></span></td>
+                        <td title="">&nbsp;</td>
+            <td><span title="未查看" class="user-stat1">
+				<a href="/resumeinfo/candidates?objId=1142192&amp;sourceId=1" target="_blank">ID:5760070</a>
+			</span><a href="/swfview?id=508" target="_blank" title="查看附件简历"><i class="atta"></i></a>            </td>
+            <td title="计算机硬件">计算机硬件&nbsp;</td>
+            <td>研发部&nbsp;</td>
+            <td title=" 北京市"> 北京市&nbsp;</td>
+            <td>男</td>
+            <td>三年&nbsp;</td>
+            <td>本科&nbsp;</td>
+            <td>23岁</td>
+                        <td>2012/09/28</td>
+          </tr>
+          <tr style="background-color: rgb(245, 245, 245); background-position: initial initial; background-repeat: initial initial; ">
+            <td><input class="t-cb tdCheck" type="checkbox" value="1142191" tabid="" name="resumeId"><span class="icon-buy buyNeed" title="购买" key="1142191"></span></td>
+                        <td title="">&nbsp;</td>
+            <td><span title="未查看" class="user-stat1">
+				<a href="/resumeinfo/candidates?objId=1142191&amp;sourceId=1" target="_blank">ID:5760070</a>
+			</span><a href="/swfview?id=508" target="_blank" title="查看附件简历"><i class="atta"></i></a>            </td>
+            <td title="电子/电器/半导体/仪器仪表">电子/电器/半导&nbsp;</td>
+            <td>dsad&nbsp;</td>
+            <td title=" 北京市"> 北京市&nbsp;</td>
+            <td>男</td>
+            <td>三年&nbsp;</td>
+            <td>本科&nbsp;</td>
+            <td>23岁</td>
+                        <td>2012/09/28</td>
+          </tr>
+          <tr>
+            <td><input class="t-cb tdCheck" type="checkbox" value="1142187" tabid="" name="resumeId"><span class="icon-buy buyNeed" title="购买" key="1142187"></span></td>
+                        <td title="">&nbsp;</td>
+            <td><span title="已查看" class="user-stat2">
+				<a href="/resumeinfo/candidates?objId=1142187&amp;sourceId=1" target="_blank">ID:5760662</a>
+			</span><a href="/swfview?id=561" target="_blank" title="查看附件简历"><i class="atta"></i></a>            </td>
+            <td title="计算机硬件">计算机硬件&nbsp;</td>
+            <td>11aaaaaa&nbsp;</td>
+            <td title=" 天津市"> 天津市&nbsp;</td>
+            <td>女</td>
+            <td>〇年&nbsp;</td>
+            <td>暂无&nbsp;</td>
+            <td>42岁</td>
+                        <td>2012/09/27</td>
+          </tr>
+          <tr style="background-color: rgb(245, 245, 245); background-position: initial initial; background-repeat: initial initial; ">
+            <td><input class="t-cb tdCheck" type="checkbox" value="1142186" tabid="" name="resumeId"><span class="icon-buy buyNeed" title="购买" key="1142186"></span></td>
+                        <td title="">&nbsp;</td>
+            <td><span title="已查看" class="user-stat2">
+				<a href="/resumeinfo/candidates?objId=1142186&amp;sourceId=1" target="_blank">ID:5760662</a>
+			</span><a href="/swfview?id=561" target="_blank" title="查看附件简历"><i class="atta"></i></a>            </td>
+            <td title="dd">dd&nbsp;</td>
+            <td>122swss&nbsp;</td>
+            <td title=" 全国"> 全国&nbsp;</td>
+            <td>女</td>
+            <td>〇年&nbsp;</td>
+            <td>暂无&nbsp;</td>
+            <td>42岁</td>
+                        <td>2012/09/27</td>
+          </tr>
+          <tr>
+            <td><input class="t-cb tdCheck" type="checkbox" value="1142178" tabid="" name="resumeId"><span class="icon-buy buyNeed" title="购买" key="1142178"></span></td>
+                        <td title="">&nbsp;</td>
+            <td><span title="已查看" class="user-stat2">
+				<a href="/resumeinfo/candidates?objId=1142178&amp;sourceId=1" target="_blank">ID:5760662</a>
+			</span><a href="/swfview?id=561" target="_blank" title="查看附件简历"><i class="atta"></i></a>            </td>
+            <td title="计算机硬件">计算机硬件&nbsp;</td>
+            <td>444&nbsp;</td>
+            <td title=" 昆山市"> 昆山市&nbsp;</td>
+            <td>女</td>
+            <td>〇年&nbsp;</td>
+            <td>暂无&nbsp;</td>
+            <td>未知</td>
+                        <td>2012/09/27</td>
+          </tr>
+          <tr style="background-color: rgb(245, 245, 245); background-position: initial initial; background-repeat: initial initial; ">
+            <td><input class="t-cb tdCheck" type="checkbox" value="1142177" tabid="" name="resumeId"><span class="icon-buy buyNeed" title="购买" key="1142177"></span></td>
+                        <td title="">&nbsp;</td>
+            <td><span title="已查看" class="user-stat2">
+				<a href="/resumeinfo/candidates?objId=1142177&amp;sourceId=1" target="_blank">ID:5760662</a>
+			</span><a href="/swfview?id=561" target="_blank" title="查看附件简历"><i class="atta"></i></a>            </td>
+            <td title="客服总监(非技术)+证券/期货/外汇...">客服总监(非技术&nbsp;</td>
+            <td>it&nbsp;</td>
+            <td title=" 北京市"> 北京市&nbsp;</td>
+            <td>女</td>
+            <td>〇年&nbsp;</td>
+            <td>暂无&nbsp;</td>
+            <td>未知</td>
+                        <td>2012/09/27</td>
+          </tr>
+          <tr>
+            <td><input class="t-cb tdCheck" type="checkbox" value="1142176" tabid="" name="resumeId"><span class="icon-buy buyNeed" title="购买" key="1142176"></span></td>
+                        <td title="">&nbsp;</td>
+            <td><span title="已查看" class="user-stat2">
+				<a href="/resumeinfo/candidates?objId=1142176&amp;sourceId=1" target="_blank">ID:5760662</a>
+			</span><a href="/swfview?id=561" target="_blank" title="查看附件简历"><i class="atta"></i></a>            </td>
+            <td title="电子/电器/半导体/仪器仪表">电子/电器/半导&nbsp;</td>
+            <td>dsad&nbsp;</td>
+            <td title=" 北京市"> 北京市&nbsp;</td>
+            <td>女</td>
+            <td>〇年&nbsp;</td>
+            <td>暂无&nbsp;</td>
+            <td>32岁</td>
+                        <td>2012/09/27</td>
+          </tr>
+          <tr style="background-color: rgb(245, 245, 245); background-position: initial initial; background-repeat: initial initial; ">
+            <td><input class="t-cb tdCheck" type="checkbox" value="1142175" tabid="" name="resumeId"><span class="icon-buyed" title="已购买"></span></td>
+                        <td title="">&nbsp;</td>
+            <td><span title="已查看" class="user-stat2">
+				<a href="/resumeinfo/candidates?objId=1142175&amp;sourceId=1" target="_blank">测试年龄t</a>
+			</span><a href="/swfview?id=561" target="_blank" title="查看附件简历"><i class="atta"></i></a>            </td>
+            <td title="复制-生物/制药/医疗器械">复制-生物/制药&nbsp;</td>
+            <td>研发部&nbsp;</td>
+            <td title=" 北京市 沈阳市"> 北京市 沈阳市&nbsp;</td>
+            <td>女</td>
+            <td>〇年&nbsp;</td>
+            <td>暂无&nbsp;</td>
+            <td>32岁</td>
+                        <td>2012/09/27</td>
+          </tr>
+          <tr>
+            <td><input class="t-cb tdCheck" type="checkbox" value="1142172" tabid="" name="resumeId"><span class="icon-buy buyNeed" title="购买" key="1142172"></span></td>
+                        <td title="">&nbsp;</td>
+            <td><span title="已查看" class="user-stat2">
+				<a href="/resumeinfo/candidates?objId=1142172&amp;sourceId=1" target="_blank">ID:5760661</a>
+			</span><a href="/swfview?id=561" target="_blank" title="查看附件简历"><i class="atta"></i></a>            </td>
+            <td title="计算机硬件">计算机硬件&nbsp;</td>
+            <td>444&nbsp;</td>
+            <td title=" 昆山市"> 昆山市&nbsp;</td>
+            <td>女</td>
+            <td>〇年&nbsp;</td>
+            <td>暂无&nbsp;</td>
+            <td>42岁</td>
+                        <td>2012/09/27</td>
+          </tr>
+          <tr style="background-color: rgb(245, 245, 245); background-position: initial initial; background-repeat: initial initial; ">
+            <td><input class="t-cb tdCheck" type="checkbox" value="1142171" tabid="" name="resumeId"><span class="icon-buy buyNeed" title="购买" key="1142171"></span></td>
+                        <td title="">&nbsp;</td>
+            <td><span title="未查看" class="user-stat1">
+				<a href="/resumeinfo/candidates?objId=1142171&amp;sourceId=1" target="_blank">ID:5760661</a>
+			</span><a href="/swfview?id=561" target="_blank" title="查看附件简历"><i class="atta"></i></a>            </td>
+            <td title="客服总监(非技术)+证券/期货/外汇...">客服总监(非技术&nbsp;</td>
+            <td>it&nbsp;</td>
+            <td title=" 北京市"> 北京市&nbsp;</td>
+            <td>女</td>
+            <td>〇年&nbsp;</td>
+            <td>暂无&nbsp;</td>
+            <td>42岁</td>
+                        <td>2012/09/27</td>
+          </tr>
+          <tr>
+            <td><input class="t-cb tdCheck" type="checkbox" value="1142166" tabid="" name="resumeId"><span class="icon-buyed" title="已购买"></span></td>
+                        <td title="">&nbsp;</td>
+            <td><span title="已查看" class="user-stat2">
+				<a href="/resumeinfo/candidates?objId=1142166&amp;sourceId=1" target="_blank">测试年龄</a>
+			</span><a href="/swfview?id=561" target="_blank" title="查看附件简历"><i class="atta"></i></a>            </td>
+            <td title="复制-生物/制药/医疗器械">复制-生物/制药&nbsp;</td>
+            <td>研发部&nbsp;</td>
+            <td title=" 北京市 沈阳市"> 北京市 沈阳市&nbsp;</td>
+            <td>女</td>
+            <td>〇年&nbsp;</td>
+            <td>暂无&nbsp;</td>
+            <td>42岁</td>
+                        <td>2012/09/27</td>
+          </tr>
+        </tbody></table>
+    	<div class="search-bar clearfix">
+            <div class="pageNum">
+              <ul class="pagesNew clearfix"><li class="page_count"><em>共搜索到427条记录</em></li><li class="first "><a href="javascript:void(0);">首页</a></li><li class="previous "><a href="javascript:void(0);">上一页</a></li><li class="page selected">1</li><li class="page"><a href="?pn=2">2</a></li><li class="page"><a href="?pn=3">3</a></li><li class="page"><a href="?pn=4">4</a></li><li class="page"><a href="?pn=5">5</a></li><li class="page"><a href="?pn=6">6</a></li><li class="page"><a href="?pn=7">7</a></li><li class="page"><a href="?pn=8">8</a></li><li class="page"><a href="?pn=9">9</a></li><li class="page"><a href="?pn=10">10</a></li><li class="next"><a href="?pn=2">下一页</a></li> <li class="last"><a href="?pn=29">尾页</a></li> </ul>            </ul></ul></div>
+        </div>
+    </div>
+</div>
+</form>
+<div class="b-wrap clearfix bgWhite">
+	<div class="b-wrap-tit">
+    	<h4>其他雇主也看了以下简历</h4>
+    </div>
+    <div class="bottom-box-green">
+    	<table width="100%">
+        	<tr>
+            	<td width="25%">
+                	<dl class="dl-owner clearfix">
+                    	<dt><img src="images/bCenter/toux_b1.jpg"></dt>
+                        <dd>
+                        <a href="#" target="_blank">李嘉诚</a><br>
+                        29岁 男<br>
+                        6年经验 北京
+                        </dd>
+                    </dl>
+                    <p class="p-owner mb-10">
+                        现职位：PM<br>
+                        公司：新浪公司<br>
+                        学校：北京科技大学（本科）
+                    </p>
+                    <a class="btn-green-b" href="#" target="_blank">查看简历</a>
+                </td>
+            	<td width="25%">
+                	<dl class="dl-owner clearfix">
+                    	<dt><img src="images/bCenter/toux_b1.jpg"></dt>
+                        <dd>
+                        <a href="#" target="_blank">李嘉诚</a><br>
+                        29岁 男<br>
+                        6年经验 北京
+                        </dd>
+                    </dl>
+                    <p class="p-owner mb-10">
+                        现职位：PM<br>
+                        公司：新浪公司<br>
+                        学校：北京科技大学（本科）
+                    </p>
+                    <a class="btn-green-b" href="#" target="_blank">查看简历</a>
+                </td>
+            	<td width="25%">
+                	<dl class="dl-owner clearfix">
+                    	<dt><img src="images/bCenter/toux_b1.jpg"></dt>
+                        <dd>
+                        <a href="#" target="_blank">李嘉诚</a><br>
+                        29岁 男<br>
+                        6年经验 北京
+                        </dd>
+                    </dl>
+                    <p class="p-owner mb-10">
+                        现职位：PM<br>
+                        公司：新浪公司<br>
+                        学校：北京科技大学（本科）
+                    </p>
+                    <a class="btn-green-b" href="#" target="_blank">查看简历</a>
+                </td>
+            	<td width="25%">
+                	<dl class="dl-owner clearfix">
+                    	<dt><img src="images/bCenter/toux_b1.jpg"></dt>
+                        <dd>
+                        <a href="#" target="_blank">李嘉诚</a><br>
+                        29岁 男<br>
+                        6年经验 北京
+                        </dd>
+                    </dl>
+                    <p class="p-owner mb-10">
+                        现职位：PM<br>
+                        公司：新浪公司<br>
+                        学校：北京科技大学（本科）
+                    </p>
+                    <a class="btn-green-b" href="#" target="_blank">查看简历</a>
+                </td>
+            </tr>
+            <tr>
+            	<td colspan="4" class="etc-owner">
+                	<div class="fl"><span class="blue fl">换一组试试看！</span><a class="pre-list-rs"></a><a class="next-list-rs ml-10"></a></div>
+                    <div class="fr"><a class="more-search-resume" href="#" target="_blank">搜索更多简历</a></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- common bottom start -->
+<div id="footer" class="backnone">
+	<div class="foot_con">
+    	<p class="padd30">
+        	<span class="c009dca">&copy; 2011-2012 百伯 </span>|
+        	<a target="_blank" href="http://www.baijob.com/p/about/index"> 关于百伯 </a>|
+        	<a target="_blank" href="http://www.baijob.com/p/about/xieyi"> 用户协议 </a>|
+        	<a target="_blank" href="http://www.baijob.com/p/about/contact"> 联系我们 </a>|
+        	<a target="_blank" href="http://www.baijob.com/p/company/index?name=%E4%B8%8A%E6%B5%B7%E7%99%BE%E5%BA%A6%E4%BA%BA%E6%89%8D%E5%92%A8%E8%AF%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8"> 加入百伯 </a>|
+        	<a target="_blank" href="http://www.baijob.com/p/thirdparty/index"> 第三方接入  </a>|
+        	<a target="_blank" href="http://tieba.baidu.com/f?kw=%B0%D9%B2%AE%BD%A8%D2%E9%D3%EB%CD%B6%CB%DF"> 意见反馈  </a>
+    	</p>
+    	<p class="footP">增值电信业务经营许可证:沪B2-20110104号    沪ICP备11017290&#12288;京公网安备110105015393 </p>
+	</div>
+</div>
+<!-- common bottom end -->
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bcenter.js"></script>
+<script type="text/javascript" src="js/dragSel.js"></script>
+<script type="text/javascript" src="js/searchb.js"></script>
+<script type="text/javascript" src="js/comlayer.js"></script>
+<script type="text/javascript" src="js/buyResume.js"></script>
+<script type="text/javascript" src="js/inbox.js"></script>
+<script>
+__comLayer__.triggerAddr(1,1);
+_buy.type = '1';   //类型
+_buy.refresh = true;	// 刷新
+_buy.init = function() {
+    _buy.obj = $("input[name='resumeId']:checked");
+}
+
+$(function(){
+	searcherGet(1);
+	$('#zhuanfa-btn').click(function(){
+		var ids=[];
+		$('.tdCheck').each(function(){
+			if($(this).attr('checked'))
+				ids.push($(this).val());
+		});
+		
+		if(ids.length==0){
+			alert('请选择要转发的简历');
+			return;
+		}
+		var ids_str = ids.toString().split(',');
+		new popLayer('/baijob/data/trans.html', true, '简历转发');
+	
+	});
+	$('#export1').click(function(){
+		var ids=[];
+		$('.tdCheck').each(function(){
+			if($(this).attr('checked'))
+				ids.push($(this).val());
+		});
+		if(ids.length==0){
+			alert('请选择要导出的简历');
+			return;
+		}
+		$('.canslide').removeClass('canslide');
+		//window.open('/inbox/export?flg=1&ids='+ids.join(','));
+		location.href='/inbox/export?flg=2&ids='+ids.join(',');
+	});
+	$('#btn-del').click(function(){
+		var n=0;
+		var ids=[];
+		$('.tdCheck').each(function(){
+			if($(this).attr('checked')){
+				ids.push($(this).val());
+				n++;
+			}
+		});
+		if(ids.length==0){
+			alert('请选择要删除的简历');
+			return;
+		}
+		if(!confirm('您确信要删除已选择的简历吗？')){
+			return;
+		}
+		$.post('/inbox/delete/', {'ids':ids.join(',')}, function(d, s){
+			if(s=='success'){
+				if(d==0){
+					alert('无法删除已购买简历');
+					return;
+				}
+				if(d>0){
+					if(d==n){
+						alert(d+'个简历删除成功');
+						setTimeout(function(){
+							location.reload();
+						}, 1000);
+					}else{
+						alert(d+'个简历删除成功，'+(n-d)+'个已购买的简历无法删除');
+						setTimeout(function(){
+							location.reload();
+						}, 3000);
+					}
+					return;
+				}
+			}
+			alert('无法删除简历');
+		});
+	});
+});
+</script>
+</body>
+</html>
